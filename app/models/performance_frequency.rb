@@ -1,0 +1,2 @@
+class PerformanceFrequency < ApplicationRecord
+end

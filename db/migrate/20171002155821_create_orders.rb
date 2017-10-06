@@ -4,7 +4,7 @@ class CreateOrders < ActiveRecord::Migration[5.1]
       t.integer :user_id
       t.integer :task_id
       t.integer :deadline_id
-
+      
       t.timestamps
     end
   end
