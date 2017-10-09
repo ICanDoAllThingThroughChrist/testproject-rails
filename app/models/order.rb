@@ -1,20 +1,20 @@
 class Order < ActiveRecord::Base
-	belongs_to :user
-	belongs_to :task
-	belongs_to :deadline
-	belongs_to :site
-	belongs_to :site2
-	belongs_to :site3
-	belongs_to :site4
-	belongs_to :site5
-	belongs_to :worksheets
-	belongs_to :user1
-	belongs_to :user2
-	belongs_to :frequency1
-	belongs_to :frequency2
+	belongs_to :user, optional: true
+	belongs_to :task, optional: true
+	# belongs_to :deadline
+	belongs_to :site, optional: true
+	# belongs_to :site2
+	# belongs_to :site3
+	# belongs_to :site4
+	# belongs_to :site5
+	# belongs_to :worksheets
+	# belongs_to :user1
+	# belongs_to :user2
+	# belongs_to :frequency1
+	# belongs_to :frequency2
   # belongs_to :artist
   # belongs_to :genre
-    has_many :comments
+  has_many :comments
   def user_name
     self.user.users if self.user !=nil
   end
