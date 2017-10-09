@@ -46,6 +46,6 @@ class OrdersController < ApplicationController
 
   private
   def order_params
-    params.require(:order).permit(:comment)
+    params.require(:order).permit(:comment, :tasks, :name)
   end
 end

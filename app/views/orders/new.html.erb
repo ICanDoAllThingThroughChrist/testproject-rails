@@ -1,17 +1,18 @@
 <h1>New Order</h1>
 
 <%= form_for @order do |f| %>
-<%= f.collection_select :task_id, Task.all, :id, :tasks %>
+<p><%= f.collection_select :task_id, Task.all, :id, :tasks %></p>
 <!-- collection_select takes 4 arguments -->
+<p><%= f.collection_select :site_id, Site.all, :id, :name %></p>
+<p><%= f.collection_select :user_id, User.all, :id, :users %></p>
+<%= f.submit %>
+<% end %>
 <br />
 <h3>Order comments go here</h3>
 <input name='order[comment_contents][]' id='order_comments_1'>
 <!-- #html name, id r always in strings -->
 <input name='order[comment_contents][]' id='order_comments_2'>
 <input name='order[comment_contents][]' id='order_comments_3'>
-
-<%= f.submit %>
-<% end %>
+<!--% end %-->
 <%= render 'form' %>
- 
 <%= link_to 'Back', orders_path %>
